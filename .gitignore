@@ -1,0 +1,53 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# ---- Virtual Environments ----
+.venv/
+venv/
+env/
+
+# ---- uv (Astral) ----
+.uv/
+.uv-cache/
+
+# ---- macOS ----
+*.DS_Store
+
+# ---- IDE ----
+.vscode/
+.idea/
+
+# ---- Logs ----
+*.log
+
+# ---- Byte-compiled ----
+*.pyc
+
+# ---- Test cache ----
+.pytest_cache/
+
+# ---- Build artifacts ----
+build/
+dist/
+*.egg
+*.whl
+
+# ---- Environment files ----
+.env
+.env.*
+*.env
+
+# ---- FastAPI reload cache ----
+*.pid
+
+# ---- Cache ----
+.cache/
+
+# ---- Local databases ----
+*.db
+*.sqlite3
