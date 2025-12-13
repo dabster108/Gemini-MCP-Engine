@@ -5,10 +5,8 @@ from google import genai
 from fastmcp import FastMCP, Client as MCPClient
 import httpx
 
-# Load environment variables
 load_dotenv()
 
-# Your Gemini API key
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found in environment variables")
@@ -63,7 +61,7 @@ async def chat_loop():
             try:
                 # Generate response using Gemini
                 response = await gemini_client.aio.models.generate_content(
-                model="gemini-2.0-flash",
+                model="gemini-1.5-flash-latest",  # Using latest flash model
                 contents=full_prompt,
                 config=genai.types.GenerateContentConfig(
                     temperature=0.7,
