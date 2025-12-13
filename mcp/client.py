@@ -63,7 +63,7 @@ async def chat_loop():
             try:
                 # Generate response using Gemini
                 response = await gemini_client.aio.models.generate_content(
-                model="gemini-1.5-turbo",
+                model="gemini-2.0-flash",
                 contents=full_prompt,
                 config=genai.types.GenerateContentConfig(
                     temperature=0.7,
