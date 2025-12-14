@@ -1,12 +1,20 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
-@app.post("/multiply")
-def get_multiplication(a: float, b: float):
-    result = a * b
-    return {"a": a, "b": b, "result": result}
+class MultiplyRequest(BaseModel):
+    a: float
+    b: float
 
+@app.post("/multiply")
+def get_multiplication(data: MultiplyRequest):
+    result = data.a * data.b
+    return {
+        "a": data.a,
+        "b": data.b,
+        "result": result
+    }
 
 if __name__ == "__main__":
     import uvicorn
