@@ -1,4 +1,4 @@
-# Gemini MCP Engine
+# Gemini MCP Engine - GEMINI SDK
 
 A powerful integration that connects Google Gemini AI with FastAPI endpoints through the Model Context Protocol (MCP). This project enables Gemini to automatically discover and use your FastAPI endpoints as tools, creating an interactive chat interface that can execute API calls.
 
